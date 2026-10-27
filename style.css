@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700&family=Karla:wght@400;600&display=swap');
+:root{--bg:#f6f0e6;--ink:#2b2118;--muted:#7a6a5a;--accent:#b5482a;--card:#fffaf2;--line:#e4d7c3}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:'Karla',sans-serif;line-height:1.7;font-size:18px}
+a{color:var(--accent);text-decoration:none}
+.wrap{max-width:860px;margin:0 auto;padding:48px 24px 80px}
+.top{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:56px;font-size:14px;letter-spacing:.2em;text-transform:uppercase}
+.top a{color:var(--ink)}.top a:hover{color:var(--accent)}
+h1,h2{font-family:'Fraunces',serif;font-weight:700;line-height:1.1}
+h1{font-size:clamp(48px,9vw,96px);letter-spacing:-.02em}
+h1 em{color:var(--accent);font-style:italic;font-weight:400}
+.lede{color:var(--muted);font-size:20px;margin:16px 0 48px;max-width:520px}
+.recipes{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+.recipes a{display:block;background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;color:var(--ink);transition:transform .3s,box-shadow .3s}
+.recipes a:hover{transform:translateY(-6px);box-shadow:0 20px 40px -20px rgba(80,40,20,.35)}
+.recipes img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.recipes span{display:block;padding:16px 20px;font-family:'Fraunces',serif;font-size:22px}
+.recipe h1{font-size:clamp(40px,7vw,72px);margin-bottom:28px}
+.hero{width:100%;border-radius:22px;display:block;box-shadow:0 30px 60px -30px rgba(80,40,20,.5);margin-bottom:48px}
+.recipe h2{font-size:32px;margin:40px 0 16px;padding-bottom:8px;border-bottom:2px solid var(--accent);display:inline-block}
+.recipe p{margin-bottom:16px}
+.recipe ul{list-style:none;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 28px;columns:2;column-gap:32px}
+.recipe ul li{padding:6px 0;break-inside:avoid}.recipe ul li::before{content:"✦ ";color:var(--accent)}
+.recipe ol{counter-reset:s;list-style:none}
+.recipe ol li{counter-increment:s;position:relative;padding:0 0 20px 60px}
+.recipe ol li::before{content:counter(s);position:absolute;left:0;top:0;width:40px;height:40px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-family:'Fraunces',serif;font-weight:700}
+footer{margin-top:64px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:14px;text-align:center}
+@media(max-width:600px){.recipe ul{columns:1}}
